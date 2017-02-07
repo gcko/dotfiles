@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# NOTE TO SELF: add to /etc/launchd.conf if you need access to the variable within applications
+# MySQL is added to the path in /etc/launchd.conf
+#PATH=$PATH:/usr/local/mysql/bin # Add MySQL to PATH for scripting
+PATH=$PATH:/usr/local/mongodb/bin # Add MongoDB to the path
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/Applications/Dev/grails-1.2.2/bin
+
+
+# GO deps
+# Uncomment to enable GO
+#export GOPATH=~/go
+#GOPATH=~/go
+#PATH=$PATH:$GOPATH/bin
+
+### Added by the Heroku Toolbelt
+# uncomment when you setup heroku
+#export PATH="/usr/local/heroku/bin:$PATH"
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .profile.pysave
+#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH

@@ -2,17 +2,10 @@
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -145,10 +138,6 @@ done
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume output volume 100'"
-
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
@@ -161,3 +150,20 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+
+####
+# Project Specific
+####
+
+alias runv1="grails run-app -https -Xms800m -Xmx1000m  -XX:PermSize=200m"
+
+alias dumpv1="mysqldump --host=convertro-apps-sandbox.cxwcvmwh3tld.us-east-1.rds.amazonaws.com -uroot -pfruitile --flush-privileges=TRUE --compress=TRUE --insert-ignore=TRUE --max_allowed_packet=1G "insight" > ~/dumps/dv1-next-$(date +"%m-%d-%y")"
+alias dumpv1-demo="mysqldump --host=convertro-apps-demo.cxwcvmwh3tld.us-east-1.rds.amazonaws.com -uroot -pfruitile --flush-privileges=TRUE --compress=TRUE --insert-ignore=TRUE --max_allowed_packet=1G "insight" > ~/dumps/dv1-demo-$(date +"%m-%d-%y")"
+alias dumpv1-prod="mysqldump --host=insight-db.convertro.com  -uroot -pfruitile --flush-privileges=TRUE --compress=TRUE --insert-ignore=TRUE --max_allowed_packet=1G "insight" > ~/dumps/dv1-prod-$(date +"%m-%d-%y")"
+
+alias dumpv2="mysqldump --host=dv2-next.cxwcvmwh3tld.us-east-1.rds.amazonaws.com -udjango_mysql -pTeW5eSar --flush-privileges=TRUE --compress=TRUE --insert-ignore=TRUE --max_allowed_packet=1G "convertro_tv_dashboard_V2" > ~/dumps/dv2-next-$(date +"%m-%d-%y")"
+alias dumpv2-demo="mysqldump --host=dv2-demo.cxwcvmwh3tld.us-east-1.rds.amazonaws.com -udjango_mysql -pTeW5eSar --flush-privileges=TRUE --compress=TRUE --insert-ignore=TRUE --max_allowed_packet=1G "convertro_tv_dashboard_V2" > ~/dumps/dv2-demo-$(date +"%m-%d-%y")"
+alias dumpv2-prod="mysqldump --host=dv2-prod.cxwcvmwh3tld.us-east-1.rds.amazonaws.com -udjango_mysql -pTeW5eSar --flush-privileges=TRUE --compress=TRUE --insert-ignore=TRUE --max_allowed_packet=1G "convertro_tv_dashboard_V2" > ~/dumps/dv2-prod-$(date +"%m-%d-%y")"
+
+alias migrate="python mysite/manage.py schemamigration tv_dashboards --auto | python mysite/manage.py migrate tv_dashboards"

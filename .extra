@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Add additional SSH Identities
+ssh-add ~/.ssh/aol_id_rsa
+ssh-add ~/.ssh/id_github_rsa
+ssh-add ~/.ssh/id_stash_rsa
+
+# Additional settings for pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+
+# HTTP-CACHE
+# Uncomment to enable http-cache
+#CVO_USER=jscott@convertro.com
+#CVO_PASS=JMSblink182
+#alias cacheit="http-cache -u jscott@convertro.com -p JMSblink182 --client intuit --static-path ~/repos/main-dash/mysite/static/"

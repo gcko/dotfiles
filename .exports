@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Make vim the default editor.
-export EDITOR='vim';
+# Make nano the default editor.
+export EDITOR='nano';
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;
@@ -13,9 +13,10 @@ export NODE_REPL_MODE='sloppy';
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
 
-# Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
-export HISTFILESIZE="${HISTSIZE}";
+# Increase Bash history size. Allow infinite entries; the default is 500.
+export HISTSIZE=""
+# Add timestamps to `history`
+export HISTTIMEFORMAT='%F %T '
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
 
@@ -28,3 +29,23 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Set JAVA_HOME correctly
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+# PyEnv extra settings
+export PYENV_ROOT=/usr/local/var/pyenv
+
+# Necessary to fix issue with jruby via rvm
+# Uncomment if necessary
+#export SSL_CERT_FILE='/usr/local/etc/openssl/cert.pem'
+
+# Reset the LD library path
+#LD_LIBRARY_PATH=""
+# necessary for ODBC
+#LD_LIBRARY_PATH=/usr/local/opt/unixodbc/lib/libodbcinst.dylib
+# Necessary for imageMagick
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+# For Vertica
+export VERTICAINI=/Library/ODBC/odbcinst.ini

@@ -48,4 +48,4 @@ export PYENV_ROOT=/usr/local/var/pyenv
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # For Vertica
-export VERTICAINI=/Library/ODBC/odbcinst.ini
+export VERTICAINI=/usr/local/etc/vertica.ini

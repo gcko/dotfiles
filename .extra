@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # Add additional SSH Identities
-ssh-add ~/.ssh/aol_id_rsa
-ssh-add ~/.ssh/id_github_rsa
-ssh-add ~/.ssh/id_stash_rsa
+ssh-add ~/.ssh/id_aol_rsa > /dev/null
+ssh-add ~/.ssh/id_github_rsa > /dev/null
+ssh-add ~/.ssh/id_stash_rsa > /dev/null
 
 # Additional settings for pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

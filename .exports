@@ -55,4 +55,9 @@ export VERTICAINI=/usr/local/etc/vertica.ini
 export KERB_ID=jascott41
 # map OSX /Users folder into docker (for scp)
 export SSHOCKER_EXTRAS="-v /Users:/Users"
+# Set temporary cache file for kerboros user
+export KRB5CCNAME=/tmp/$KERB_ID-krb5cache
 
+
+# For Docker & AWS Profiles
+export AWS_PROFILE=federate

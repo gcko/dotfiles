@@ -4,6 +4,8 @@
 ssh-add ~/.ssh/id_aol_rsa > /dev/null
 ssh-add ~/.ssh/id_github_rsa > /dev/null
 ssh-add ~/.ssh/id_stash_rsa > /dev/null
+ssh-add ~/.ssh/variable_aws_key.pem > /dev/null
+ssh-add ~/.ssh/id_gitlab_rsa > /dev/null
 
 # Additional settings for pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

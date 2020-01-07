@@ -30,34 +30,3 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-# Set JAVA_HOME correctly
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-
-# PyEnv extra settings
-export PYENV_ROOT=/usr/local/var/pyenv
-
-# Necessary to fix issue with jruby via rvm
-# Uncomment if necessary
-#export SSL_CERT_FILE='/usr/local/etc/openssl/cert.pem'
-
-# Reset the LD library path
-#LD_LIBRARY_PATH=""
-# necessary for ODBC
-#LD_LIBRARY_PATH=/usr/local/opt/unixodbc/lib/libodbcinst.dylib
-# Necessary for imageMagick
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-
-# For Vertica
-export VERTICAINI=/usr/local/etc/vertica.ini
-
-# For SSHocker
-# set kerberos username (will stop asking every time)
-export KERB_ID=jascott41
-# map OSX /Users folder into docker (for scp)
-export SSHOCKER_EXTRAS="-v /Users:/Users"
-# Set temporary cache file for kerboros user
-export KRB5CCNAME=/tmp/$KERB_ID-krb5cache
-
-
-# For Docker & AWS Profiles
-export AWS_PROFILE=federate

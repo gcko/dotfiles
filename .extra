@@ -17,3 +17,28 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 #CVO_USER=jscott@convertro.com
 #CVO_PASS=JMSblink182
 #alias cacheit="http-cache -u jscott@convertro.com -p JMSblink182 --client intuit --static-path ~/repos/main-dash/mysite/static/"
+
+# Exports
+# Set JAVA_HOME correctly
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+# PyEnv extra settings
+export PYENV_ROOT=/usr/local/var/pyenv
+
+# Necessary to fix issue with jruby via rvm
+# Uncomment if necessary
+#export SSL_CERT_FILE='/usr/local/etc/openssl/cert.pem'
+
+# Reset the LD library path
+#LD_LIBRARY_PATH=""
+# necessary for ODBC
+#LD_LIBRARY_PATH=/usr/local/opt/unixodbc/lib/libodbcinst.dylib
+# Necessary for imageMagick
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+# For Vertica
+export VERTICAINI=/usr/local/etc/vertica.ini
+
+
+# For Docker & AWS Profiles
+export AWS_PROFILE=federate

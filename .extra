@@ -42,3 +42,9 @@ export VERTICAINI=/usr/local/etc/vertica.ini
 
 # For Docker & AWS Profiles
 export AWS_PROFILE=federate
+
+# brew install bash-completion@2
+# enable homebrew v1 completions
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+# enabled bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

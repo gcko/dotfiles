@@ -23,4 +23,10 @@ PATH=$PATH:/Library/Developer/grails-1.2.2/bin
 # Setting PATH for Python 2.7
 # The orginal version is saved in .profile.pysave
 #PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+
+# Add platform-tools to the path for Android Studio Simulator
+PATH=/Users/jaredmscott/Library/Android/sdk/platform-tools:$PATH
+
+
+# Export Path
 export PATH

@@ -30,3 +30,5 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
+# React-native - add android env variables to enable building apps
+export ANDROID_HOME=$HOME/Library/Android/sdk

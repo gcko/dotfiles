@@ -27,6 +27,12 @@ PATH=$PATH:/Library/Developer/grails-1.2.2/bin
 # Add platform-tools to the path for Android Studio Simulator
 PATH=/Users/jaredmscott/Library/Android/sdk/platform-tools/platform-tools:$PATH
 
+# react-native: add some android dev tools to path to enable building
+PATH=$PATH:$ANDROID_HOME/emulator
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/tools/bin
+PATH=$PATH:$ANDROID_HOME/platform-tools
+
 
 # Export Path
 export PATH

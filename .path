@@ -25,7 +25,7 @@ PATH=$PATH:/Library/Developer/grails-1.2.2/bin
 #PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 
 # Add platform-tools to the path for Android Studio Simulator
-PATH=/Users/jaredmscott/Library/Android/sdk/platform-tools:$PATH
+PATH=/Users/jaredmscott/Library/Android/sdk/platform-tools/platform-tools:$PATH
 
 
 # Export Path

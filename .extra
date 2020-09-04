@@ -11,7 +11,6 @@ ssh-add ~/.ssh/id_gitlab_rsa > /dev/null
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-
 # HTTP-CACHE
 # Uncomment to enable http-cache
 #CVO_USER=jscott@convertro.com
@@ -24,6 +23,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
 # PyEnv extra settings
 export PYENV_ROOT=/usr/local/var/pyenv
+eval "$(pyenv init -)"
 
 # Necessary to fix issue with jruby via rvm
 # Uncomment if necessary
@@ -48,3 +48,14 @@ export AWS_PROFILE=federate
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 # enabled bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+
+# AdoptOpenJDK function to switch versions
+jdk() {
+        version=$1
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        java -version
+ }
+
+# Use function to immediately switch to version 1.8 of Java
+jdk 1.8

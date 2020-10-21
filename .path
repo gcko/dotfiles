@@ -8,7 +8,12 @@ PATH=$PATH:/usr/local/mongodb/bin # Add MongoDB to the path
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Add grails to path
-PATH=$PATH:/Library/Developer/grails-1.2.2/bin
+#PATH=$PATH:/Library/Developer/grails-1.2.2/bin
+
+# GNU "make" has been installed as "gmake".
+# If you need to use it as "make", you can add a "gnubin" directory
+# to your PATH like:
+PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 # GO deps
 # Uncomment to enable GO

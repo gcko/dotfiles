@@ -7,37 +7,14 @@ PATH=/usr/local/sbin:$PATH
 PATH=$PATH:/usr/local/mongodb/bin # Add MongoDB to the path
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-# Add grails to path
-#PATH=$PATH:/Library/Developer/grails-1.2.2/bin
-
 # GNU "make" has been installed as "gmake".
 # If you need to use it as "make", you can add a "gnubin" directory
 # to your PATH like:
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
-# GO deps
-# Uncomment to enable GO
-#export GOPATH=~/go
-#GOPATH=~/go
-#PATH=$PATH:$GOPATH/bin
-
 ### Added by the Heroku Toolbelt
 # uncomment when you setup heroku
 #export PATH="/usr/local/heroku/bin:$PATH"
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .profile.pysave
-#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-
-# Add platform-tools to the path for Android Studio Simulator
-PATH=/Users/jaredmscott/Library/Android/sdk/platform-tools/platform-tools:$PATH
-
-# react-native: add some android dev tools to path to enable building
-PATH=$PATH:$ANDROID_HOME/emulator
-PATH=$PATH:$ANDROID_HOME/tools
-PATH=$PATH:$ANDROID_HOME/tools/bin
-PATH=$PATH:$ANDROID_HOME/platform-tools
-
 
 # Export Path
 export PATH

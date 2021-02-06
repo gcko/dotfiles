@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE[*]}")" || exit;
 
-git pull origin main;
+git pull origin master;
 
 function doIt() {
 	rsync --exclude ".git/" \
@@ -13,13 +13,14 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
+		# shellcheck source=.bash_profile
 	source ~/.bash_profile;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
 	doIt;
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+	read -r -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;

@@ -12,12 +12,6 @@ ssh-add ~/.ssh/id_aws_measured_rsa > /dev/null
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-# HTTP-CACHE
-# Uncomment to enable http-cache
-#CVO_USER=jscott@convertro.com
-#CVO_PASS=JMSblink182
-#alias cacheit="http-cache -u jscott@convertro.com -p JMSblink182 --client intuit --static-path ~/repos/main-dash/mysite/static/"
-
 # Exports
 # Set JAVA_HOME correctly
 #export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
@@ -26,37 +20,33 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 export PYENV_ROOT=/usr/local/var/pyenv
 eval "$(pyenv init -)"
 
-# Necessary to fix issue with jruby via rvm
-# Uncomment if necessary
-#export SSL_CERT_FILE='/usr/local/etc/openssl/cert.pem'
-
-# Reset the LD library path
-#LD_LIBRARY_PATH=""
-# necessary for ODBC
-#LD_LIBRARY_PATH=/usr/local/opt/unixodbc/lib/libodbcinst.dylib
 # Necessary for imageMagick
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
-# For Vertica
-export VERTICAINI=/usr/local/etc/vertica.ini
-
-
 # For Docker & AWS Profiles
-export AWS_PROFILE=federate
+export AWS_PROFILE=measured
 
-# brew install bash-completion@2
 # enable homebrew v1 completions
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 # enabled bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-
 # AdoptOpenJDK function to switch versions
 jdk() {
-        version=$1
-        export JAVA_HOME=$(/usr/libexec/java_home -v "$version");
-        java -version
+	local version=$1
+	# shellcheck disable=SC2155
+	local JAVA_HOME=$(/usr/libexec/java_home -v "$version")
+	export JAVA_HOME;
+	java -version
 }
 
 # Use function to immediately switch to version 1.8 of Java
 jdk 1.8
+
+# Overwrite the existing server() function in .functions to use the python3 equivalent
+# Start an HTTP server from a directory, optionally specifying the port
+function server() {
+	local port="${1:-8000}";
+	sleep 1 && open "http://localhost:${port}/" &
+	python -m http.server "${port}"
+}

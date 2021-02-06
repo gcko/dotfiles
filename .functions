@@ -170,10 +170,3 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
-
-# Switch between different JDK versions
-jdk() {
-        version=$1
-        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-        java -version
-}

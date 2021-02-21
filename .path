@@ -12,6 +12,9 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # to your PATH like:
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
+# Set version to Ruby from brew
+PATH="/usr/local/opt/ruby/bin:$PATH"
+
 ### Added by the Heroku Toolbelt
 # uncomment when you setup heroku
 #export PATH="/usr/local/heroku/bin:$PATH"

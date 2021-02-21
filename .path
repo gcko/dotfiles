@@ -15,6 +15,9 @@ PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 # Set version to Ruby from brew
 PATH="/usr/local/opt/ruby/bin:$PATH"
 
+# Add pyenv to path
+PATH="$(pyenv root)/shims:$PATH"
+
 ### Added by the Heroku Toolbelt
 # uncomment when you setup heroku
 #export PATH="/usr/local/heroku/bin:$PATH"

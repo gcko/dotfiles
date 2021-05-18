@@ -50,3 +50,7 @@ function server() {
 	sleep 1 && open "http://localhost:${port}/" &
 	python -m http.server "${port}"
 }
+
+# Set Groovy PATH
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+

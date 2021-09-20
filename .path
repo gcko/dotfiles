@@ -22,5 +22,8 @@ PATH="$(pyenv root)/shims:$PATH"
 # uncomment when you setup heroku
 #export PATH="/usr/local/heroku/bin:$PATH"
 
+PATH="/usr/local/opt/php@7.4/bin:$PATH"
+PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+
 # Export Path
 export PATH

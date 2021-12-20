@@ -32,7 +32,7 @@ export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Add github API token for Homebrew
-export HOMEBREW_GITHUB_API_TOKEN=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'
+export HOMEBREW_GITHUB_API_TOKEN=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
 
 # AdoptOpenJDK function to switch versions
 jdk() {
@@ -43,8 +43,8 @@ jdk() {
 	java -version
 }
 
-# Use function to immediately switch to version 1.8 of Java
-jdk 11
+# Use function to immediately switch to version 17 of Java
+jdk 17
 
 # Overwrite the existing server() function in .functions to use the python3 equivalent
 # Start an HTTP server from a directory, optionally specifying the port

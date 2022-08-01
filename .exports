@@ -45,3 +45,6 @@ export CPPFLAGS="-I/usr/local/opt/ruby/include"
 
 # For pkg-config to find ruby you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
+
+# For Homebrew's access to GitHub
+export HOMEBREW_GITHUB_API_TOKEN="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"

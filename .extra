@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
 # Add additional SSH Identities
-#ssh-add ~/.ssh/id_aol_rsa > /dev/null
 ssh-add ~/.ssh/id_github_rsa > /dev/null
-#ssh-add ~/.ssh/id_stash_rsa > /dev/null
 ssh-add ~/.ssh/variable_aws_key.pem > /dev/null
 ssh-add ~/.ssh/id_gitlab_rsa > /dev/null
-#ssh-add ~/.ssh/id_aws_measured_rsa > /dev/null
-#ssh-add ~/.ssh/measured_bitbucket_id_rsa > /dev/null
-ssh-add ~/.ssh/id_codegiant_rsa > /dev/null
+#ssh-add ~/.ssh/id_codegiant_rsa > /dev/null
 
 # Additional settings for pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
@@ -47,6 +43,10 @@ jdk() {
 
 # Use function to immediately switch to version 17 of Java
 jdk 17
+
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
 
 # Overwrite the existing server() function in .functions to use the python3 equivalent
 # Start an HTTP server from a directory, optionally specifying the port

@@ -25,5 +25,8 @@ PATH="$(pyenv root)/shims:$PATH"
 PATH="/usr/local/opt/php@7.4/bin:$PATH"
 PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 
+# Add Python Poetry to the PATH
+PATH="/Users/jaredmscott/.local/bin:$PATH"
+
 # Export Path
 export PATH

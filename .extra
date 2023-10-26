@@ -61,3 +61,17 @@ function server() {
 # Set Groovy PATH
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
+__prompt () {
+  if nave should-auto; then
+    exec nave auto
+  if
+  # Show the nave version in white-on-blue, but the "normal" node
+  # version in green
+  if [ "$NAVE" != "" ]; then
+    echo -ne " \033[44;37mnode@$NAVE\033[0m"
+  else
+    echo -ne " \033[32mnode@$(node -p 'process.version.slice(1)' 2>/dev/null)\033[0m"
+  fi
+}
+PS1="\\$ "
+export PROMPT_COMMAND='__prompt'

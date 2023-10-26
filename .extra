@@ -65,12 +65,13 @@ __prompt () {
   if nave should-auto; then
     exec nave auto
   fi
-  # Show the nave version in white-on-blue, but the "normal" node
-  # version in green
+  # Show the nave version in green, but the "normal" node
+  # version in magenta
+  # @see https://misc.flogisoft.com/bash/tip_colors_and_formatting
   if [ "$NAVE" != "" ]; then
-    echo -ne " \033[44;37mnode@$NAVE\033[0m"
+    echo -ne " \033[38;5;46mnode@$NAVE\033[0m"
   else
-    echo -ne " \033[32mnode@$(node -p 'process.version.slice(1)' 2>/dev/null)\033[0m"
+    echo -ne " \033[38;5;198mnode@$(node -p 'process.version.slice(1)' 2>/dev/null)\033[0m"
   fi
 }
 PS1="\\$ "

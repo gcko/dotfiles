@@ -63,6 +63,10 @@ function server() {
 # Set Groovy PATH
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
+# Set GOBIN for GO
+GOBIN=$(go env GOPATH)/bin
+export GOBIN
+
 __prompt () {
   if nave should-auto; then
     exec nave auto

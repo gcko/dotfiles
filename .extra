@@ -8,7 +8,8 @@ ssh-add ~/.ssh/id_new_github_ed25519 > /dev/null
 ssh-add ~/.ssh/id_tkspring_gitlab > /dev/null
 ssh-add ~/.ssh/ts_staging_db_key_ed25519 > /dev/null
 ssh-add ~/.ssh/ts_dev_db_key_ed25519 > /dev/null
-ssh-add ~/.ssh/jared_at_codegiant_ed25519 > /dev/null
+#ssh-add ~/.ssh/jared_at_codegiant_ed25519 > /dev/null
+ssh-add ~/.ssh/jared_at_codegiant_rsa > /dev/null
 #ssh-add ~/.ssh/id_codegiant_rsa > /dev/null
 
 # Additional settings for pyenv

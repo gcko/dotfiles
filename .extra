@@ -63,7 +63,7 @@ function server() {
 }
 
 # Set Groovy PATH
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
+#export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # Set GOBIN for GO
 export GOBIN=$(go env GOPATH)/bin

@@ -26,5 +26,8 @@ PATH="/Users/jaredmscott/.local/bin:$PATH"
 # Add GOPATH to Path
 PATH=$(go env GOPATH)/bin:$PATH
 
+# Add Vector to path
+PATH="$PATH:/Users/jaredmscott/.vector/bin"
+
 # Export Path
 export PATH

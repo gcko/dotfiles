@@ -2,16 +2,18 @@
 
 # NOTE TO SELF: add to /etc/launchd.conf if you need access to the variable within applications
 # MySQL is added to the path in /etc/launchd.conf
-PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# not installed
+#PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 PATH="/usr/local/sbin:$PATH"
 
 # GNU "make" has been installed as "gmake".
 # If you need to use it as "make", you can add a "gnubin" directory
 # to your PATH like:
-PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+#PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 # Set version to Ruby from brew
-PATH="/usr/local/opt/ruby/bin:$PATH"
+# currently not installed
+#PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Add pyenv to path
 PATH="$(pyenv root)/shims:$PATH"

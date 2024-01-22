@@ -31,9 +31,9 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export AWS_PROFILE=measured
 
 # enable homebrew v1 completions
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+#export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 # enabled bash completion
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+#[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Add github API token for Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=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

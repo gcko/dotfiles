@@ -9,32 +9,12 @@ ssh-add ~/.ssh/id_tkspring_gitlab > /dev/null
 ssh-add ~/.ssh/id_tkspring_github > /dev/null
 ssh-add ~/.ssh/ts_staging_db_key_ed25519 > /dev/null
 ssh-add ~/.ssh/ts_dev_db_key_ed25519 > /dev/null
-#ssh-add ~/.ssh/jared_at_codegiant_ed25519 > /dev/null
-ssh-add ~/.ssh/jared_at_codegiant_rsa > /dev/null
-#ssh-add ~/.ssh/id_codegiant_rsa > /dev/null
-
-# Additional settings for pyenv
-#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
-# Exports
-# Set JAVA_HOME correctly
-#export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-
-# PyEnv extra settings
-#export PYENV_ROOT=/usr/local/var/pyenv
-#eval "$(pyenv init -)"
 
 # Necessary for imageMagick
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # For Docker & AWS Profiles
-export AWS_PROFILE=measured
-
-# enable homebrew v1 completions
-#export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-# enabled bash completion
-#[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+#export AWS_PROFILE=personal
 
 # Add github API token for Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=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

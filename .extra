@@ -64,3 +64,6 @@ __prompt () {
 }
 PS1="\\$ "
 export PROMPT_COMMAND='__prompt'
+
+# Fallback for recce-docs
+export DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib

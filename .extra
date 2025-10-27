@@ -3,12 +3,8 @@
 # Add additional SSH Identities
 ssh-add ~/.ssh/id_github_rsa > /dev/null
 ssh-add ~/.ssh/variable_aws_key.pem > /dev/null
-# ssh-add ~/.ssh/id_gitlab_rsa > /dev/null
+ssh-add ~/.ssh/id_recce_gitlab_ed25519 > /dev/null
 ssh-add ~/.ssh/id_new_github_ed25519 > /dev/null
-#ssh-add ~/.ssh/id_tkspring_gitlab > /dev/null
-#ssh-add ~/.ssh/id_tkspring_github > /dev/null
-#ssh-add ~/.ssh/ts_staging_db_key_ed25519 > /dev/null
-#ssh-add ~/.ssh/ts_dev_db_key_ed25519 > /dev/null
 ssh-add ~/.ssh/recce_cloud_infra.pem > /dev/null
 
 # Necessary for imageMagick
